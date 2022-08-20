@@ -7,8 +7,7 @@ straight/repos/straight.el/bootstralel 中の 96 行め、
 nongnu リポジトリをコメントアウトしてstraight を起動する。
 
 ## 2021-09-27
-cide 1.1.1 バグってないか？
-
+cider 1.1.1 バグってないか？
 
 ## straight
 * https://www.reddit.com/r/emacs/comments/caifq4/package_updates_with_straight/
