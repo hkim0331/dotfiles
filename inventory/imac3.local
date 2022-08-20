@@ -1,0 +1,24 @@
+# inventory
+imac3 ansible_host=imac3.local ansible_port=2223 ansible_user=hkim ansible_ssh_private_key_file=/Users/hkim/.ssh/id_rsa
+
+[bash]
+imac3
+
+[clj]
+imac3
+
+[commonlisp]
+imac3
+
+[emacs_init]
+imac3
+
+[rc]
+imac3
+
+[utils]
+imac3
+
+[zsh]
+imac3
+

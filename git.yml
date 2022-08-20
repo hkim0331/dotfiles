@@ -1,0 +1,14 @@
+---
+- name: install git global init files
+  hosts: all
+  tasks:
+    - name: copy gitconfig and gitignore_global
+      copy:
+        src:  "{{item.src}}"
+        dest: "{{item.dest}}"
+        mode: "0600"
+        force: yes
+      loop:
+        - {src: git/gitconfig, dest: ~/.gitconfig}
+        - {src: git/gitignore_global, dest: ~/.gitignore_global}
+...

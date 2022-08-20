@@ -1,0 +1,15 @@
+---
+# using zsh now, not fully maintained.
+- name: bash init files setup
+  hosts: all
+  tasks:
+    - name: copy bash_profile
+      copy:
+        src: "{{item.src}}"
+        dest: "{{item.dest}}"
+        force: yes
+      loop:
+        - {src: bash/bash_profile, dest: ~/.bash_profile}
+        - {src: bash/bashrc,       dest: ~/.bashrc}
+        - {src: bash/bash_aliases, dest: ~/.bash_aliases}
+...
