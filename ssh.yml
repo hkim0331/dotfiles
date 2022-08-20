@@ -1,0 +1,22 @@
+---
+- name: copy ssh/config (and ssh/authorized_keys?)
+  hosts: all
+  tasks:
+    - name: create ~/.ssh, mode 0700
+      file:
+        path: ~/.ssh
+        state: directory
+        mode: "0700"
+    - name: copy ssh/authorized_keys
+      copy:
+        src:  ssh/authorized_keys
+        dest: ~/.ssh/
+        mode: "0600"
+        force: yes
+    - name: copy ssh/config
+      copy:
+        src:  ssh/config
+        dest: ~/.ssh/
+        mode: "0600"
+        force: yes
+...

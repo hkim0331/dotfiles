@@ -1,0 +1,71 @@
+#!/bin/zsh
+#
+# origin: ${dotfiles}/zsh/zshrc
+# interactive zsh setup.
+# being read from ~/zprofile.
+#
+# * prompt.
+# * completions.
+# * fzf.
+
+[ -z "$PS1" ] && return
+
+## CDPATH
+typeset -U cdpath
+cdpath=(
+    .
+    $HOME/Desktop
+    $HOME/projects
+    $HOME/workspace
+    $HOME)
+export CDPATH
+
+# https://www.rasukarusan.com/entry/2018/08/14/083000
+autoload -Uz is-at-least
+if is-at-least 4.3.11
+then
+  autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+  add-zsh-hook chpwd chpwd_recent_dirs
+  zstyle ':chpwd:*'      recent-dirs-max 500
+  zstyle ':chpwd:*'      recent-dirs-default yes
+  zstyle ':completion:*' recent-dirs-insert both
+fi
+
+# fzf-cdr
+function fzf-cdr() {
+    target_dir=`cdr -l | sed 's/^[^ ][^ ]*  *//' | fzf`
+    target_dir=`echo ${target_dir/\~/$HOME}`
+    if [ -n "$target_dir" ]; then
+        cd $target_dir
+    fi
+}
+
+# https://qiita.com/ysk_1031/items/8cde9ce8b4d0870a129d
+function fzf-src () {
+  local selected_dir=$(ghq list -p | fzf --query "$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N fzf-src
+bindkey '^g' fzf-src
+
+# brew install zsh-git-prompt
+if [ -e "$HOMEBREW_PREFIX/opt/zsh-git-prompt/zshrc.sh" ]; then
+  source "$HOMEBREW_PREFIX/opt/zsh-git-prompt/zshrc.sh"
+  PROMPT='%B%m%~%b$(git_super_status)
+%# '
+fi
+
+## brew install zsh-completions
+if type brew &>/dev/null; then
+  FPATH=$HOMEBREW_PREFIX/share/zsh-completions:$FPATH
+  autoload -Uz compinit && compinit
+fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# FIXME: when enabled this, emacs shell prompt will be disrupted.
+#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

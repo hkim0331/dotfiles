@@ -1,0 +1,59 @@
+#-*- mode: Shell-script; -*-
+
+## fzf-cdr
+alias cdd='fzf-cdr'
+alias co='git checkout $(git branch -a | tr -d " " |fzf --height 100% --prompt "CHECKOUT BRANCH>" --preview "git log --color=always {}" | head -n 1 | sed -e "s/^\*\s*//g" | perl -pe "s/remotes\/origin\///g")'
+
+## use gnu versions
+[ -e /usr/local/bin/gawk ]   && alias awk='/usr/local/bin/gawk'
+[ -e /usr/local/bin/gcat ]   && alias cat='/usr/local/bin/gcat'
+[ -e /usr/local/bin/gcp ]    && alias cp='/usr/local/bin/gcp'
+[ -e /usr/local/bin/gegrep ] && alias egrep='/usr/local/bin/gegrep --color=auto'
+[ -e /usr/local/bin/gfgrep ] && alias fgrep='/usr/local/bin/gfgrep --color=auto'
+[ -e /usr/local/bin/ggrep ]  && alias grep='/usr/local/bin/ggrep --color=auto'
+[ -e /usr/local/bin/gls ]    && alias ls='/usr/local/bin/gls --color=auto'
+[ -e /usr/local/bin/gsed ]   && alias sed='/usr/local/bin/gsed -r'
+[ -e /usr/local/bin/gsort ]  && alias sort='/usr/local/bin/gsort'
+[ -e /usr/local/bin/gtar ]   && alias tar='/usr/local/bin/gtar'
+
+## shorten commands
+alias dl='docker ps -l -q'
+alias gh='git tag -l --sort=-v:refname| head'
+alias gt='git tag -l --sort=v:refname | tail -1'
+alias l='ls -l'
+alias la='ls -lA'
+alias ll='ls -l --color | less -R'
+alias pf="ps ax | grep '[s]sh -fN'"
+alias pfw='pf'
+alias rm='rm -i'
+alias today='date +%F'
+#alias top='htop'
+
+## which is better, grope or grepr?
+alias grope='grep -r -I --exclude-dir=.git --exclude=\*~ --line-number'
+alias grepr='grope'
+
+## tmux
+alias ktx='ssh kafka -t /home/hkim/bin/tx'
+alias ntx7='ssh nuc7.local -t /home/hkim/bin/tx'
+alias ntx='ssh nuc.local -t /home/hkim/bin/tx'
+alias otx='ssh orange -t /home/hkim/bin/tx'
+
+## pi4 mathematica
+alias mathematica-pi4='ssh -Y pi@pi4.local mathematica'
+alias wolfram-pi4='ssh pi@pi4.local wolfram'
+
+##############
+# macos only #
+##############
+
+alias ss='netstat -ptcp | grep ESTAB'
+
+#alias vnc-imac3='open vnc://10.0.34.3'
+#alias vnc-tmac2='open vnc://hkim.synology.me'
+
+## mount c104 AirMac Express
+# can not. 2019-01-29
+#alias mount-data='mount_smbfs smb://c104.melt.kyutech.ac.jp/Data /Volumes/Data'
+
+alias endpoints='egrep "^((get)|(post)|(delete)|(put))"'
