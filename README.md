@@ -1,6 +1,7 @@
 # README
 
 ## Require
+
 * ansible
 
 ## Usage
@@ -13,5 +14,6 @@ or locally,
 
 ## License
 
+Copyright &copy; Hiroshi Kimura
 
 
