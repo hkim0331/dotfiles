@@ -7,9 +7,9 @@
         src: clojure/deps.edn
         dest: ~/.clojure/
         force: yes
-    - name: copy clojure/profile.clj into ~/.lein
+    - name: copy clojure/profiles.clj into ~/.lein
       copy:
-        src: clojure/profile.edn
+        src: clojure/profiles.clj
         dest: ~/.lein/
         force: yes
 ...

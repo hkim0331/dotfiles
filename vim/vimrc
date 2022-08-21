@@ -74,6 +74,11 @@ inoremap <expr> ,dt strftime('%H:%M')
 " set vb t_vb=
 set belloff=all
 
+
+
+call plug#begin('~/.vim/plugged')
+
 " https://github.com/tyru/caw.vim
 Plug 'tyru/caw.vim'
 
+call plug#end()
