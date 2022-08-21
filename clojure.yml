@@ -1,0 +1,15 @@
+---
+- name: clojure, leiningen
+  hosts: all
+  tasks:
+    - name: copy clojure/deps.edn into ~/.clojure
+      copy:
+        src: clojure/deps.edn
+        dest: ~/.clojure/
+        force: yes
+    - name: copy clojure/profiles.clj into ~/.lein
+      copy:
+        src: clojure/profiles.clj
+        dest: ~/.lein/
+        force: yes
+...

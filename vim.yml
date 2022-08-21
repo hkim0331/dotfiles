@@ -1,0 +1,22 @@
+---
+# vimrc include iced-vim set up
+- name: vim, vim-iced
+  hosts: all
+  tasks:
+    - name: ~/.vimrc
+      copy:
+        src:  vim/vimrc
+        dest: ~/.vimrc
+        mode: "0600"
+        force: yes
+    - name: vim-iced
+      blockinfile:
+        path: ~/.vimrc
+        create: no
+        insertafter: EOF
+        marker: "\" {mark} ANSIBLE vim-iced setup."
+        block: "{{item}}"
+      with_file:
+        - vim/vim-iced
+...
+

@@ -1,0 +1,14 @@
+---
+- name: rc files
+  hosts: all
+  tasks:
+    - name: copy rc files
+      copy:
+        src: "{{item.src}}"
+        dest: "{{item.dest}}"
+        force: yes
+      loop:
+        - {src: rc/gemrc,     dest: ~/.gemrc}
+        - {src: rc/muttrc,    dest: ~/.muttrc}
+        - {src: rc/tmux.conf, dest: ~/.tmux.conf}
+...

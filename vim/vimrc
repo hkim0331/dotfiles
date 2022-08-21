@@ -1,0 +1,79 @@
+set encoding=utf-8
+set fileformat=unix
+
+set nocompatible
+set backspace=start,eol,indent
+set whichwrap=b,s,[,],<,>,~
+set mouse=a
+
+syntax on
+highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
+match ZenkakuSpace /　/
+set guifont=Menlo\ Regular:h14
+let lisp_rainbow=1
+
+set expandtab
+set tabstop=2
+set shiftwidth=2
+"set noexpandtab
+"set softtabstop=0
+
+"----------------------------------------------------
+" Emacs風関係、入力モードで動作
+"----------------------------------------------------
+" コマンド入力中断
+imap <silent> <C-g> <ESC><ESC><ESC><CR>i
+
+" 画面分割, insert-mode. imap はinsert mode map か？
+imap <silent> <C-x>1 <ESC>:only<CR>i
+imap <silent> <C-x>2 <ESC>:sp<CR>i
+imap <silent> <C-x>3 <ESC>:vsp<CR>i
+imap <silent> <C-x>o <ESC><C-w>w<CR>i
+imap <silent> <C-x>p <ESC><C-w>p<CR>i
+
+" 消去、編集
+imap <C-k> <ESC>d$i
+imap <C-y> <ESC>pi
+imap <C-d> <ESC>lxi
+
+" 移動
+imap <C-a>  <Home>
+imap <C-e>  <End>
+imap <C-b>  <Left>
+imap <C-f>  <Right>
+imap <C-n>  <Down>
+imap <C-p>  <UP>
+"imap <ESC>< <ESC>ggi
+"imap <ESC>> <ESC>Gi
+
+" ファイル, :e の後ろのスペースはセパレータ。
+imap <C-c><C-c>  <ESC>:qa<CR>
+imap <C-x><C-c>  <ESC>:qa!<CR>
+imap <C-w><C-w>  <ESC>:w<CR>
+imap <C-x><C-w>  <ESC>:w!<CR>
+imap <C-x><C-f>  <ESC>:e 
+
+" エラーリカバリ
+" imap <C-/> <ESC>ui
+
+" その他
+map  <C-x><C-e>  :Explore<CR>
+
+" 現在日時を入力, ノーマルモード
+" http://d.hatena.ne.jp/hyuki/20130714/vim
+" :r! date では？
+nmap <C-o><C-o> <ESC>i<C-r>=strftime("%Y-%m-%d %H:%M:%S")<CR><CR>
+
+" 日付け入力, インサートモード
+inoremap <expr> ,df strftime('%Y-%m-%d %H:%M')
+inoremap <expr> ,dd strftime('%Y-%m-%d')
+inoremap <expr> ,dt strftime('%H:%M')
+
+" stop beep
+" https://qiita.com/jz4o/items/57806f6ee74c0b91e9c1
+" set vb t_vb=
+set belloff=all
+
+" https://github.com/tyru/caw.vim
+Plug 'tyru/caw.vim'
+
