@@ -1,8 +1,9 @@
 # CHANGELOG
 
 ## Unreleased
-* シンボリックリンクか、ansible か？
-* ansible でシンボリックリンクするようにするか？
+* 特定のホストでは実行しないエントリー e.g. m1 では basictex 不要
+* 複数のymlを一気に実行する。Makefile ではない。
+
 
 ## 1.1.0 - 2022-08-21
 * vim
