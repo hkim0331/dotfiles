@@ -1,0 +1,2 @@
+# inventory
+nuc ansible_host=app.melt ansible_port=22 ansible_user=ubuntu ansible_ssh_private_key_file=/Users/hkim/.ssh/id_rsa
