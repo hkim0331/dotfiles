@@ -7,6 +7,7 @@
   clojure からの呼び出しのために、reinstall --build-from-source が必要になる。
 * clojure/installer - 時代遅れになるインストーラを直置きするより、
   インストーラの見つかる URL を置く。
+* cljstyle - defn の間は空行二つ？
 
 
 ## 1.2.1 - 2022-08-22
