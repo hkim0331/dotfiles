@@ -24,15 +24,18 @@ Host hkim.jp
 ## 5-24 ##
 ##########
 
+Host m2
+     Hostname hkim.ddns.net
+
+#Host clojure
+#      Hostname clojure.local
+#      User ubuntu
+
 ## nuc.local
 #
 # Host *.lxd
 #      ProxyCommand ssh -W %h:%p nuc.local
 #      User ubuntu
-
-Host clojure
-      Hostname clojure.local
-      User ubuntu
 
 ########################
 ## s214, 150.69.90.34 ##
