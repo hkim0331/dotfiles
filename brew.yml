@@ -1,10 +1,16 @@
 ---
+# 初期化後、各 mac で Brewfile は育てるはず。
+# 育てたらそれぞれで brew bundle dump
+# force: no
 - name: brew
   hosts: all
   tasks:
+    - name: Brewfile will not overwrite
+      debug:
+        msg: will not overwrite existing ~/Brewfile.
     - name: copy Brewfile
       copy:
         src: brew/Brewfile
         dest: ~/Brewfile
-        force: yes
+        force: no
 ...
