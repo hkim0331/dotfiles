@@ -5,10 +5,7 @@
 - name: brew
   hosts: all
   tasks:
-    - name: Brewfile will not overwrite
-      debug:
-        msg: will not overwrite existing ~/Brewfile.
-    - name: copy Brewfile
+    - name: copy Brewfile only if not exist
       copy:
         src: brew/Brewfile
         dest: ~/Brewfile
