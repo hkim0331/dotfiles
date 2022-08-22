@@ -4,6 +4,10 @@
 * シンボリックリンクか、ansible か？
 * ansible でシンボリックリンクするようにするか？
 
+## 1.2.0-SNAPSHOT
+### Added
+* brew/myci
+
 ## 1.1.0 - 2022-08-21
 * vim
 * clojure
