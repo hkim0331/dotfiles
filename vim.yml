@@ -3,7 +3,7 @@
 - name: vim, vim-iced
   hosts: all
   tasks:
-    - name: ~/.vimrc
+    - name: copy ~/.vimrc
       copy:
         src:  vim/vimrc
         dest: ~/.vimrc
