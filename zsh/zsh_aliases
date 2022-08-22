@@ -17,7 +17,6 @@
 
 ## shorten commands
 alias al='ansible-playbook -i localhost, -c local'
-#alias antq='java -jar ~/bin/antq-standalone.jar'
 alias df-h='df -h /System/Volumes/Data'
 alias df-r='df -h /Volumes/RAM_DISK'
 alias df-s='df -h /Volumes/SD?'
@@ -32,12 +31,10 @@ alias ms='multipass shell'
 alias pf="ps ax | grep '[s]sh -fN'"
 alias pfw='pf'
 alias psq='psql -h localhost -U postgres'
-
-alias rm='rm -i'
+alias rm='trash-cli'
 #alias tm='/System/Applications/Time\ Machine.app/Contents/MacOS/Time\ Machine'
 alias today='date +%F'
 #alias top='htop'
-
 
 ## tmux
 alias ktx='ssh kafka -t /home/hkim/bin/tx'

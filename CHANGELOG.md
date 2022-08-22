@@ -3,17 +3,16 @@
 ## Unreleased
 * 特定のホストでは実行しないエントリー e.g. m1 では basictex 不要
 * 複数の yml を一気に実行する。Makefile ではない。
-* Brewfile を上書きしない。
 * opecv はコメントアウトしない。brew bundle cleanup で消えてしまう。
   clojure からの呼び出しのために、reinstall --build-from-source が必要になる。
 
 
-## 1.2.0-SNAPSHOT
+## 1.2.0 - 2022-08-22
+### Changed
 * Brewfile force: no
-
-## 1.2.0-SNAPSHOT
 ### Added
-* brew/myci
+* brew/mycli
+* brew/trash-cli
 
 ## 1.1.0 - 2022-08-21
 * vim
