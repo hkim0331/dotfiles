@@ -1,4 +1,6 @@
-# README
+# dotfiles
+
+summarize my dotfiles.
 
 ## Require
 
@@ -14,6 +16,6 @@ or locally,
 
 ## License
 
-Copyright &copy; Hiroshi Kimura
+Copyright 2022 &copy; Hiroshi Kimura
 
 
