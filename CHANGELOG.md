@@ -5,7 +5,13 @@
 * 複数の yml を一気に実行する。Makefile ではない。
 * opecv はコメントアウトしない。brew bundle cleanup で消えてしまう。
   clojure からの呼び出しのために、reinstall --build-from-source が必要になる。
+* clojure/installer - 時代遅れになるインストーラを直置きするより、
+  インストーラの見つかる URL を置く。
 
+
+## 1.2.1 - 2022-08-22
+* fixed typo `trash-put`
+* learn how to use cljstyle. also removed ~/.cljstyle
 
 ## 1.2.0 - 2022-08-22
 ### Changed

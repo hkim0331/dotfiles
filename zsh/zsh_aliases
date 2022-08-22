@@ -31,7 +31,7 @@ alias ms='multipass shell'
 alias pf="ps ax | grep '[s]sh -fN'"
 alias pfw='pf'
 alias psq='psql -h localhost -U postgres'
-alias rm='trash-cli'
+alias rm='trash-put'
 #alias tm='/System/Applications/Time\ Machine.app/Contents/MacOS/Time\ Machine'
 alias today='date +%F'
 #alias top='htop'
@@ -58,9 +58,10 @@ alias sqpro='/Applications/Sequel\ Pro.app/Contents/MacOS/Sequel\ Pro'
 alias pgadmin='/Applications/pgAdmin\ 4.app/Contents/MacOS/pgAdmin4'
 
 alias vnc-imac3='open vnc://imac3.local'
+alias vnc-m1='open vnc://m1.local'
 alias vnc-m2='open vnc://hkim.ddns.net'
+alias vnc-m2.local='open vnc://m2.local'
 alias vnc-m3='open vnc://10.0.34.5'
-alias vnc-tmac2='open vnc://tmac2.local'
 
 # macOS 12.3
 alias python=python3
