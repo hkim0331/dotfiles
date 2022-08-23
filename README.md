@@ -10,7 +10,7 @@ summarize my dotfiles.
 
     % ansible-playbook -i <host> <thing>.yml
 
-or locally,
+or playbook locally,
 
     % ansible-playbook -i localhost, -c local <thing>.yml
 

@@ -1,5 +1,8 @@
 ---
-- name: clojure, leiningen
+# deps.edn は Homebrew のコピーに
+# org.slf4j/slf4j-nop {:mvn/version "RELEASE"}
+# を追加。
+- name: clojure, leiningen, cljstyle
   hosts: all
   tasks:
     - name: copy clojure/deps.edn into ~/.clojure
@@ -11,5 +14,10 @@
       copy:
         src: clojure/profiles.clj
         dest: ~/.lein/
+        force: yes
+    - name: copy clojure/cljstyle to ~/.cljstyle
+      copy:
+        src: clojure/deps.edn
+        dest: ~/.clojure/
         force: yes
 ...
