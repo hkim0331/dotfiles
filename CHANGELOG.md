@@ -1,8 +1,29 @@
 # CHANGELOG
 
 ## Unreleased
-* シンボリックリンクか、ansible か？
-* ansible でシンボリックリンクするようにするか？
+* 複数の yml を一気に実行する。Makefile ではない。
+* 特定のホストでは実行しないエントリー e.g. m1 では basictex 不要
+  => 500MB くらいと割り切ってもよい。
+* opecv はコメントアウトしない。brew bundle cleanup で消えてしまう。
+  clojure からの呼び出しのために、reinstall --build-from-source が必要になる。
+* clojure/installer - 時代遅れになるインストーラを直置きするより、
+  インストーラの見つかる URL を置く。
+
+
+## 1.2.2 - 2022-08-23
+* came back `clojure/cljstyle` for 1 line between defns.
+  default is 2 lines.
+
+## 1.2.1 - 2022-08-22
+* fixed typo `trash-put`
+* learn how to use cljstyle. also removed ~/.cljstyle
+
+## 1.2.0 - 2022-08-22
+### Changed
+* Brewfile force: no
+### Added
+* brew/mycli
+* brew/trash-cli
 
 ## 1.1.0 - 2022-08-21
 * vim

@@ -1,10 +1,13 @@
 ---
+# 初期化後、各 mac で Brewfile は育てるはず。
+# 育てたらそれぞれで brew bundle dump
+# force: no
 - name: brew
   hosts: all
   tasks:
-    - name: copy Brewfile
+    - name: copy Brewfile only if not exist
       copy:
         src: brew/Brewfile
         dest: ~/Brewfile
-        force: yes
+        force: no
 ...

@@ -61,6 +61,7 @@ path=(
     $HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin(N-/)
     $HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnubin(N-/)
     $HOMEBREW_PREFIX/opt/lsof/bin(N-/)
+    $HOMEBREW_PREFIX/opt/mysql-client/bin(N-/)
     $HOMEBREW_PREFIX/opt/opencv/bin(N-)
     $HOMEBREW_PREFIX/opt/ruby/bin(N-/)
     $HOMEBREW_PREFIX/opt/sqlite/bin(N-/)
