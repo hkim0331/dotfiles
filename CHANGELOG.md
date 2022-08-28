@@ -10,6 +10,12 @@
   インストーラの見つかる URL を置く。
 
 
+## 1.2.3 - 2022-08-28
+* `git vt` is aliased "tag -l -n --sort=-v:refname"
+* `git/deps.edn` is a manual copy of
+  `/opt/homebrew/Cellar/clojure/1.11.1.1155/deps.edn` (must improve)
+* improved alias `grope` to exclude some meaningless subdirectories.
+
 ## 1.2.2 - 2022-08-23
 * came back `clojure/cljstyle` for 1 line between defns.
   default is 2 lines.
