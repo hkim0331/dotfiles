@@ -9,6 +9,13 @@
 * clojure/installer - 時代遅れになるインストーラを直置きするより、
   インストーラの見つかる URL を置く。
 
+## 1.2.5
+- `postgresql@14` instead of `postgresql`.
+
+## 1.2.4
+- remove mysql-client
+  could not make mariadb dump using mysql-client, `mysqldump`.
+  moved to mariadb/mycli.
 
 ## 1.2.3 - 2022-08-28
 * `git vt` is aliased "tag -l -n --sort=-v:refname"
