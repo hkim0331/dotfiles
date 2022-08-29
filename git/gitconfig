@@ -29,4 +29,4 @@
   cm = commit
   co = checkout
   st = status
-  vt = "tag -l --sort=-v:refname"
+  vt = "tag -l -n --sort=-v:refname"
