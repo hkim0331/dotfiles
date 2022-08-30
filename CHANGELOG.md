@@ -9,8 +9,9 @@
 * clojure/installer - 時代遅れになるインストーラを直置きするより、
   インストーラの見つかる URL を置く。
 
-## 1.2.6-SNAPSHOT
+## 1.2.6 - 2022-08-30
 - updated ~/.cljstyle by `cljstyle migrate`
+- updated grope to exclude .shadow-cljs folder
 
 ## 1.2.5
 - `postgresql@14` instead of `postgresql`.
