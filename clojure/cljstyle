@@ -1,10 +1,12 @@
-{:indents {defspec [[:inner 0]]
-           fdef [[:inner 0]]
-           for-all [[:inner 0]]
-           with-db-transaction [[:block 1]]}
- :line-break-functions? false
- :list-indent-size 1
- :max-consecutive-blank-lines 1
- :padding-lines 1
- :reformat-types? false}
-
+{:rules
+ {:indentation
+  {:list-indent 1,
+   :indents
+   {defspec [[:inner 0]],
+    fdef [[:inner 0]],
+    for-all [[:inner 0]],
+    with-db-transaction [[:block 1]]}},
+  :blank-lines {:max-consecutive 1, :padding-lines 1},
+  :functions {:enabled? false},
+  :types {:enabled? false},
+  :namespaces {:indent-size 1}}}
