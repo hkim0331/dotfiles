@@ -9,6 +9,9 @@
 * clojure/installer - 時代遅れになるインストーラを直置きするより、
   インストーラの見つかる URL を置く。
 
+## 1.2.6-SNAPSHOT
+- updated ~/.cljstyle by `cljstyle migrate`
+
 ## 1.2.5
 - `postgresql@14` instead of `postgresql`.
 
