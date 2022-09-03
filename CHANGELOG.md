@@ -9,6 +9,11 @@
 * clojure/installer - 時代遅れになるインストーラを直置きするより、
   インストーラの見つかる URL を置く。
 
+## 1.2.7-SNAPSHOT
+### Fixed
+- .cljstyle のインストールを間違っていた。
+
+
 ## 1.2.6 - 2022-08-30
 - updated ~/.cljstyle by `cljstyle migrate`
 - updated grope to exclude .shadow-cljs folder
