@@ -18,6 +18,6 @@
     - name: copy clojure/cljstyle to ~/.cljstyle
       copy:
         src: clojure/cljstyle
-        dest: ~/
+        dest: ~/.cljstyle
         force: yes
 ...
