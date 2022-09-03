@@ -17,7 +17,7 @@
         force: yes
     - name: copy clojure/cljstyle to ~/.cljstyle
       copy:
-        src: clojure/deps.edn
-        dest: ~/.clojure/
+        src: clojure/cljstyle
+        dest: ~/
         force: yes
 ...
