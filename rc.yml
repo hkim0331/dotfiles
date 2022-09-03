@@ -10,5 +10,6 @@
       loop:
         - {src: rc/gemrc,     dest: ~/.gemrc}
         - {src: rc/muttrc,    dest: ~/.muttrc}
+        - {src: rc/myclirc,   dest: ~/.myclirc}
         - {src: rc/tmux.conf, dest: ~/.tmux.conf}
 ...

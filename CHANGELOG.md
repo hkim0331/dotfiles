@@ -13,6 +13,8 @@
 ### Fixed
 - .cljstyle のインストールを間違っていた。
 
+### Added
+- rc/myclirc
 
 ## 1.2.6 - 2022-08-30
 - updated ~/.cljstyle by `cljstyle migrate`
