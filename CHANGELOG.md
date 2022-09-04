@@ -9,9 +9,15 @@
 * clojure/installer - 時代遅れになるインストーラを直置きするより、
   インストーラの見つかる URL を置く。
 
-## 1.2.7-SNAPSHOT
+## 1.2.7 - 2022-09-04
 ### Fixed
 - .cljstyle のインストールを間違っていた。
+
+### Added
+- emacs/inits/60_roswell.el
+
+### Changed
+- emacs/inits order of loading packages
 
 ### Added
 - rc/myclirc
