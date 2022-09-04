@@ -9,6 +9,23 @@
 * clojure/installer - 時代遅れになるインストーラを直置きするより、
   インストーラの見つかる URL を置く。
 
+## 1.2.7 - 2022-09-04
+### Fixed
+- .cljstyle のインストールを間違っていた。
+
+### Added
+- emacs/inits/60_roswell.el
+
+### Changed
+- emacs/inits order of loading packages
+
+### Added
+- rc/myclirc
+
+## 1.2.6 - 2022-08-30
+- updated ~/.cljstyle by `cljstyle migrate`
+- updated grope to exclude .shadow-cljs folder
+
 ## 1.2.5
 - `postgresql@14` instead of `postgresql`.
 
