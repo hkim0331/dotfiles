@@ -10,12 +10,14 @@
       copy:
         src: emacs/init.el
         dest: ~/.emacs.d/
-    - name: copy emacs/inits/ into ~/.emacs.d/inits/
-      copy:
+    - name: sync emacs/inits/ into ~/.emacs.d/inits/
+      synchronize:
         src: emacs/inits/
         dest: ~/.emacs.d/inits/
-    - name: copy emacs/inits-disabled/ into ~/.emacs.d/inits-disabled/
-      copy:
+        delete: yes
+    - name: sync emacs/inits-disabled/ into ~/.emacs.d/inits-disabled/
+      synchronize:
         src: emacs/inits-disabled/
         dest: ~/.emacs.d/inits-disabled/
+        delete: yes
 ...
