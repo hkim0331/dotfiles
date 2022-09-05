@@ -64,13 +64,13 @@ a.out
 
 ## clojure
 /.m2/
-/.calva/
-/.clj-kondo/.cache
-/.lsp/.cache
 /.shadow-cljs/
 /node_modules/
 /target/
+.calva/
+.clj-kondo/
 .cpcache/
+.lsp/
 .nrepl-port
 .prepl-port
 .rebel_readline_history
