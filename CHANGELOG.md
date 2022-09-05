@@ -9,6 +9,21 @@
 * clojure/installer - 時代遅れになるインストーラを直置きするより、
   インストーラの見つかる URL を置く。
 
+## 1.2.10 - 2022-09-05
+### hotfix
+- .calva, .clj-kondo, .cpcacpe, .lsp はプロジェクトのトップ以外にも
+ 作られる。1.2.9 ではまずい。たとえば、.gitignore に次を書いていても、
+```
+.clj-kondo/.cache/
+```
+`sort/.clj-kondo/.cache/v1/...`  にはマッチしない。
+
+## 1.2.9 - 2022-09-05
+### Changed
+- git/gitignore_global
+  プロジェクトのサブディレクトリに .cpcache, .clj-kondo, .lsp が
+  作成されることがある。ignore するのは .cache だけで OK か?
+
 ## 1.2.8 - 2022-09-04
 ### Fix
 - emacs.yml inits/ 下のファイルはコピーじゃいけない。sync か。
