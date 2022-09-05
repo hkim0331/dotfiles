@@ -63,18 +63,18 @@ a.out
 *.dylib
 
 ## clojure
-/.calva/
-/.clj-kondo/
-/.cpcache/
-/.env
-/.lsp/
 /.m2/
+/.calva/
+/.clj-kondo/.cache
+/.lsp/.cache
 /.shadow-cljs/
 /node_modules/
 /target/
+.cpcache/
 .nrepl-port
 .prepl-port
 .rebel_readline_history
+.env
 
 
 

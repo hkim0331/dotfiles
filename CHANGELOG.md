@@ -9,6 +9,13 @@
 * clojure/installer - 時代遅れになるインストーラを直置きするより、
   インストーラの見つかる URL を置く。
 
+
+## 1.2.9-SNAPSHOT
+### Changed
+- git/gitignore_global
+  プロジェクトのサブディレクトリに .cpcache, .clj-kondo, .lsp が
+  作成されることがある。ignore するのは .cache だけで OK か?
+
 ## 1.2.8 - 2022-09-04
 ### Fix
 - emacs.yml inits/ 下のファイルはコピーじゃいけない。sync か。
