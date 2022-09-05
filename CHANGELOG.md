@@ -10,7 +10,7 @@
   インストーラの見つかる URL を置く。
 
 
-## 1.2.9-SNAPSHOT
+## 1.2.9 - 2022-09-05
 ### Changed
 - git/gitignore_global
   プロジェクトのサブディレクトリに .cpcache, .clj-kondo, .lsp が
