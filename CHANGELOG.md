@@ -4,10 +4,14 @@
 * 複数の yml を一気に実行する。Makefile ではない。
 * 特定のホストでは実行しないエントリー e.g. m1 では basictex 不要
   => 500MB くらいと割り切ってもよい。
-* opecv はコメントアウトしない。brew bundle cleanup で消えてしまう。
-  clojure からの呼び出しのために、reinstall --build-from-source が必要になる。
 * clojure/installer - 時代遅れになるインストーラを直置きするより、
   インストーラの見つかる URL を置く。
+
+
+## 1.2.11-SNAPSHOT
+- opecv はコメントアウトしない。brew bundle cleanup で消えてしまう。
+  clojure からの呼び出しのために、reinstall --build-from-source が必要になる。
+- git/autocrlf=true は Windows オンリー。マックでそれやるとおかしなことになる。
 
 ## 1.2.10 - 2022-09-05
 ### hotfix
