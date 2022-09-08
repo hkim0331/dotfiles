@@ -8,10 +8,14 @@
   インストーラの見つかる URL を置く。
 
 
-## 1.2.11-SNAPSHOT
+## 1.2.11 - 2022-09-08
 - opecv はコメントアウトしない。brew bundle cleanup で消えてしまう。
   clojure からの呼び出しのために、reinstall --build-from-source が必要になる。
 - git/autocrlf=true は Windows オンリー。マックでそれやるとおかしなことになる。
+- common-lisp/roswell
+  いったん、brew uninstall roswell してから brew install roswell し直し。
+  これで imac3 の common-lisp は復活した。
+- alias ec for emacsclient
 
 ## 1.2.10 - 2022-09-05
 ### hotfix
