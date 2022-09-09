@@ -23,13 +23,16 @@
 
   ;; Simple nREPL server REPL, headless
   ;; call with -i flag to start interactive client
-  :repl/nrepl
+  ;; clj -M:nrepl
+  ;; or
+  ;; clj -M:nrepl -i
+  :nrepl
   {:extra-deps {nrepl/nrepl {:mvn/version "1.0.0"}}
    :main-opts  ["-m" "nrepl.cmdline"]}
 
   ;; Run an interactive Clojure REPL with nREPL connection and CIDER libraries
-  ;; clojure -M:repl/cider
-  :repl/cider
+  ;; clj -M:cider
+  :cider
   {:extra-deps {nrepl/nrepl       {:mvn/version "1.0.0"}
                 cider/cider-nrepl {:mvn/version "0.28.5"}}
    :main-opts  ["-m" "nrepl.cmdline"
