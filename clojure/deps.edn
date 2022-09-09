@@ -1,6 +1,8 @@
 {:mvn/repos
  {"central" {:url "https://repo1.maven.org/maven2/"}
-  "clojars" {:url "https://repo.clojars.org/"}}:paths ["src"]
+  "clojars" {:url "https://repo.clojars.org/"}}
+
+ :paths ["src"]
 
  :deps
  {org.clojure/clojure {:mvn/version "1.11.1"}
@@ -15,6 +17,7 @@
     org.slf4j/slf4j-nop {:mvn/version "1.7.25"}}
    :ns-default clojure.tools.cli.api
    :ns-aliases {help clojure.tools.cli.help}}
+
   :test
   {:extra-paths ["test"]}
 
@@ -25,7 +28,8 @@
    :main-opts  ["-m" "nrepl.cmdline"]}
 
   ;; Run an interactive Clojure REPL with nREPL connection and CIDER libraries
-  ;; clojure -M:repl/cider  :repl/cider
+  ;; clojure -M:repl/cider
+  :repl/cider
   {:extra-deps {nrepl/nrepl       {:mvn/version "1.0.0"}
                 cider/cider-nrepl {:mvn/version "0.28.5"}}
    :main-opts  ["-m" "nrepl.cmdline"
