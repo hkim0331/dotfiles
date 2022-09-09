@@ -8,6 +8,9 @@
   インストーラの見つかる URL を置く。
 
 
+## 1.2.12-SNAPSHOT
+- some nrepl aliases from practicalli
+
 ## 1.2.11 - 2022-09-08
 - opecv はコメントアウトしない。brew bundle cleanup で消えてしまう。
   clojure からの呼び出しのために、reinstall --build-from-source が必要になる。
