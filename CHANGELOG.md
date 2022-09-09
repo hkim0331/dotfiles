@@ -8,7 +8,7 @@
   インストーラの見つかる URL を置く。
 
 
-## 1.2.12-SNAPSHOT
+## 1.2.12 - 2022-09-09
 - some nrepl aliases from practicalli
 
 ## 1.2.11 - 2022-09-08
