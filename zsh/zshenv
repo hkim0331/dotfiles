@@ -1,15 +1,22 @@
 #!/bin/zsh
+#
 # origin: ${dotfiles}/zsh/zshenv
 #
-# zsh reads this first.
-# next ~/.zprofile.
+# zsh read firstly this.
+# if .zshenv_local exists, read it.
+# then .zprofile
+#
+# order:
+# > .zshenv
+#   .zprofile
+#   .zshrc
+#   .zsh_aliase
 #
 
-export G=/Users/hkim/projects/literacy/grading
-
-# expires 2022-09-11
-export GITHUB_API_TOKEN=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
+# expires 2022-12-10
+export GITHUB_API_TOKEN=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
 export HOMEBREW_GITHUB_API_TOKEN=$GITHUB_API_TOKEN
 
 export XDG_BASE_HOME=$HOME/.config
 
+[ -f $HOME/.zshenv_local ] && . $HOME/.zshenv_local

@@ -2,6 +2,13 @@
 #
 # origin: ${dotfiles}/zsh/zshrc
 # interactive zsh setup.
+#
+# order:
+#   .zshenv
+#   .zprofile
+# > .zshrc
+#   .zsh_aliase
+#
 # being read from ~/zprofile.
 #
 # * prompt.
