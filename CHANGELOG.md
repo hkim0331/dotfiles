@@ -2,11 +2,16 @@
 
 ## Unreleased
 * 複数の yml を一気に実行する。Makefile ではない。
-* 特定のホストでは実行しないエントリー e.g. m1 では basictex 不要
-  => 500MB くらいと割り切ってもよい。
 * clojure/installer - 時代遅れになるインストーラを直置きするより、
   インストーラの見つかる URL を置く。
 
+
+## 1.2.13 - 2022-09-14
+- zsh.yml overwrite existing ~/.zshenv.
+  instead, read ~/.zshenv_local if exists
+
+## 1.2.12 - 2022-09-09
+- some nrepl aliases from practicalli
 
 ## 1.2.11 - 2022-09-08
 - opecv はコメントアウトしない。brew bundle cleanup で消えてしまう。

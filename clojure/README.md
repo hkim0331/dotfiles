@@ -1,5 +1,9 @@
 # clojure
 
+## deps.edn
+
+[practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn)
+
 ## antq
 
 ```

@@ -1,6 +1,12 @@
 #!/bin/zsh
 #
-# being read from ~/.zprofile
+# lastly being read from ~/.zprofile
+#
+# order:
+#   .zshenv
+#   .zprofile
+#   .zshrc
+# > .zsh_aliase
 #
 
 ## use gnu versions

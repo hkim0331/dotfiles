@@ -2,19 +2,14 @@
 - name: copy zsh init files.
   hosts: all
   tasks:
-    - name: copy zshenv only when not exists.
-      copy:
-        src: zsh/zshenv
-        dest: ~/.zshenv
-        mode : "0600"
-        force: no
-    - name: copy zprofile, zshrc, zsh_aliases.
+    - name: copy zshenv, zprofile, zshrc, zsh_aliases.
       copy:
         src:  "{{item.src}}"
         dest: "{{item.dest}}"
         mode: "0600"
         force: yes
       loop:
+        - {src: zsh/zshenv,      dest: ~/.zshenv}
         - {src: zsh/zprofile,    dest: ~/.zprofile}
         - {src: zsh/zshrc,       dest: ~/.zshrc}
         - {src: zsh/zsh_aliases, dest: ~/.zsh_aliases}
