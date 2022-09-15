@@ -6,6 +6,10 @@
   インストーラの見つかる URL を置く。
 
 
+## 1.12.13.1 - 2022-09-15
+- Your GitHub access token has been found in hkim0331/dotfiles and revoked
+  zshenv をgit 下で管理するのをやめる。zshenv_local 作戦もやめ。
+
 ## 1.2.13 - 2022-09-14
 - zsh.yml overwrite existing ~/.zshenv.
   instead, read ~/.zshenv_local if exists
