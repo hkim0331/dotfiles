@@ -10,16 +10,16 @@
 #
 
 ## use gnu versions
-[ -e $HOMEBREW_PREFIX/bin/gawk ]   && alias awk="$HOMEBREW_PREFIX/bin/gawk"
-[ -e $HOMEBREW_PREFIX/bin/gcat ]   && alias cat="$HOMEBREW_PREFIX/bin/gcat"
-[ -e $HOMEBREW_PREFIX/bin/gcp ]    && alias cp="$HOMEBREW_PREFIX/bin/gcp"
+[ -e $HOMEBREW_PREFIX/bin/gawk ] && alias awk="$HOMEBREW_PREFIX/bin/gawk"
+[ -e $HOMEBREW_PREFIX/bin/gcat ] && alias cat="$HOMEBREW_PREFIX/bin/gcat"
+[ -e $HOMEBREW_PREFIX/bin/gcp ] && alias cp="$HOMEBREW_PREFIX/bin/gcp"
 [ -e $HOMEBREW_PREFIX/bin/gegrep ] && alias egrep="$HOMEBREW_PREFIX/bin/gegrep --color=auto"
 [ -e $HOMEBREW_PREFIX/bin/gfgrep ] && alias fgrep="$HOMEBREW_PREFIX/bin/gfgrep --color=auto"
-[ -e $HOMEBREW_PREFIX/bin/ggrep ]  && alias grep="$HOMEBREW_PREFIX/bin/ggrep --color=auto"
-[ -e $HOMEBREW_PREFIX/bin/gls ]    && alias ls="$HOMEBREW_PREFIX/bin/gls --color=auto"
-[ -e $HOMEBREW_PREFIX/bin/gsed ]   && alias sed="$HOMEBREW_PREFIX/bin/gsed"
-[ -e $HOMEBREW_PREFIX/bin/gsort ]  && alias sort="$HOMEBREW_PREFIX/bin/gsort"
-[ -e $HOMEBREW_PREFIX/bin/gtar ]   && alias tar="$HOMEBREW_PREFIX/bin/gtar"
+[ -e $HOMEBREW_PREFIX/bin/ggrep ] && alias grep="$HOMEBREW_PREFIX/bin/ggrep --color=auto"
+[ -e $HOMEBREW_PREFIX/bin/gls ] && alias ls="$HOMEBREW_PREFIX/bin/gls --color=auto"
+[ -e $HOMEBREW_PREFIX/bin/gsed ] && alias sed="$HOMEBREW_PREFIX/bin/gsed"
+[ -e $HOMEBREW_PREFIX/bin/gsort ] && alias sort="$HOMEBREW_PREFIX/bin/gsort"
+[ -e $HOMEBREW_PREFIX/bin/gtar ] && alias tar="$HOMEBREW_PREFIX/bin/gtar"
 
 ## shorten commands
 alias al='ansible-playbook -i localhost, -c local'
@@ -27,7 +27,7 @@ alias df-h='df -h /System/Volumes/Data'
 alias df-r='df -h /Volumes/RAM_DISK'
 alias df-s='df -h /Volumes/SD?'
 alias dl='docker ps -l -q'
-alias ec='emacsclient --alternate-editor="" -t .'
+alias ec='emacsclient --alternate-editor="" -t'
 alias grope='ggrep -r -I --exclude-dir=.git --exclude-dir=.clj-kondo --exclude-dir=.lsp --exclude-dir=.shadow-cljs --exclude-dir=target --exclude=\*~ --line-number'
 alias inet='/sbin/ifconfig | grep "inet "'
 alias l='ls -l'
@@ -64,15 +64,16 @@ alias ss='netstat -ptcp | grep ESTAB'
 alias sqpro='/Applications/Sequel\ Pro.app/Contents/MacOS/Sequel\ Pro'
 alias pgadmin='/Applications/pgAdmin\ 4.app/Contents/MacOS/pgAdmin4'
 
-alias vnc-imac3='open vnc://imac3.local'
-alias vnc-m1='open vnc://m1.local'
+alias vnc-imac3.local='open vnc://imac3.local'
+alias vnc-m1.local='open vnc://m1.local'
 alias vnc-m2='open vnc://hkim.ddns.net'
 alias vnc-m2.local='open vnc://m2.local'
-alias vnc-m3='open vnc://10.0.34.5'
+alias vnc-m3='open vnc://m3'
+alias vnc-m3.local='open vnc://m3.local'
 
 # macOS 12.3
-alias python=python3
-alias pip=pip3
+# alias python=python3
+# alias pip=pip3
 #
 
 ## mount c104 AirMac Express
