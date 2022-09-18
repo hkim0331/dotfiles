@@ -5,6 +5,14 @@
 * clojure/installer - 時代遅れになるインストーラを直置きするより、
   インストーラの見つかる URL を置く。
 
+## 1.13.0 - 2022-09-18
+### Added
+- bash-git-prompt
+- zsh/fix-opt-zshrc.sh
+  brew の zsh-git-prompt はいまだに python をポイントしている。
+  python3 にスクリプトを書き換えないとプロンプトがリポジトリの状態を
+  反映しない。
+
 
 ## 1.12.13.1 - 2022-09-15
 - Your GitHub access token has been found in hkim0331/dotfiles and revoked
