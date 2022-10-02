@@ -5,6 +5,14 @@
 * clojure/installer - 時代遅れになるインストーラを直置きするより、
   インストーラの見つかる URL を置く。
 
+## 1.3.1 - 2022-10-01
+### Added
+- brew/pandoc
+  pandoc は前から使っていたが？
+
+### removed
+- brew/jupyterlab
+
 ## 1.3.0 - 2022-09-18
 ### Added
 - bash-git-prompt

@@ -62,19 +62,31 @@ a.out
 ##
 *.dylib
 
-## clojure
+## clojure projects
+### luminus
+/target
+/classes
+/checkouts
+profiles.clj
+pom.xml
+pom.xml.asc
+*.jar
+*.class
+/.lein-*
+/.nrepl-port
+/.prepl-port
+.hgignore
+.hg/
+
+## addded by me
+/.calva/
+/.clj-kondo/.cache/
+/.cpcache/
+/.env
+/.lsp/.cache/
 /.m2/
+/.rebel_readline_history
 /.shadow-cljs/
 /node_modules/
-/target/
-.calva/
-.clj-kondo/
-.cpcache/
-.lsp/
-.nrepl-port
-.prepl-port
-.rebel_readline_history
-.env
-
 
 
