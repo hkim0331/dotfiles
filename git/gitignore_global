@@ -79,14 +79,14 @@ pom.xml.asc
 .hg/
 
 ## addded by me
-/.calva/
-/.clj-kondo/.cache/
-/.cpcache/
-/.env
-/.lsp/.cache/
-/.m2/
-/.rebel_readline_history
-/.shadow-cljs/
-/node_modules/
+.calva
+.clj-kondo/.cache
+.cpcache
+.env
+.lsp/.cache
+.m2
+.rebel_readline_history
+.shadow-cljs
+node_modules
 
 
