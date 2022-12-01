@@ -1,3 +1,5 @@
+# 2011-12-01
+
 # Compiled source #
 ###################
 *.com
@@ -23,10 +25,9 @@
 # Logs and databases #
 ######################
 *.log
-
-
+##
 ## stop ignoring .sql 2021-10-04
-##*.sql
+#*.sql
 *.sqlite
 
 # OS generated files #
@@ -39,15 +40,29 @@
 ehthumbs.db
 Thumbs.db
 
-# backup files ans vi swap.
+# backup files ans vi swap #
+############################
 *~
 *.bak
 *.swp
 \#*
 
+# hkim added #
+##############
+/.vagrant/
+/vendor/
+a.out
+*.dylib
 
-# luminus #
-###########
+## commmon-lisp
+*.fasl
+*.dx32fsl
+*.dx64fsl
+*.lx32fsl
+*.lx64fsl
+*.x86f
+
+## luminus
 /target
 /lib
 /classes
@@ -64,30 +79,13 @@ profiles.clj
 /.clj-kondo/.cache/
 /.lsp/.cache/
 /.calva/output-window/
-/.shadow-cljs
+
 /node_modules
 /log
 
-# hkim added #
-##############
-a.out
-*.dylib
-
-/.vagrant/
-
-/vendor/
-
-# commmon-lisp #
-################
-*.fasl
-*.dx32fsl
-*.dx64fsl
-*.lx32fsl
-*.lx64fsl
-*.x86f
-
-# clojure #
-###########
-/.calva/
-/.cpcache/
+## addded by hkimura
 /.rebel_readline_history
+/.shadow-cljs
+/node_modules
+
+
