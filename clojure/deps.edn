@@ -1,13 +1,9 @@
-{:mvn/repos
- {"central" {:url "https://repo1.maven.org/maven2/"}
-  "clojars" {:url "https://repo.clojars.org/"}}
-
- :paths ["src"]
+{:paths ["src"]
 
  :deps
- {org.clojure/clojure {:mvn/version "1.11.1"}
+ {org.clojure/clojure {:mvn/version "1.11.1"}}
   ;; stop antq warning messages
-  org.slf4j/slf4j-nop {:mvn/version "RELEASE"}}
+  ;; org.slf4j/slf4j-nop {:mvn/version "RELEASE"}}
 
  :aliases
  {:deps
@@ -40,4 +36,8 @@
   {:extra-paths ["test"]
    :extra-deps {io.github.cognitect-labs/test-runner
                 {:git/tag "v0.5.1", :git/sha "dfb30dd"}}
-   :exec-fn cognitect.test-runner.api/test}}}
+   :exec-fn cognitect.test-runner.api/test}}
+
+ :mvn/repos
+ {"central" {:url "https://repo1.maven.org/maven2/"}
+  "clojars" {:url "https://repo.clojars.org/"}}}

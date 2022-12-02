@@ -1,3 +1,5 @@
+# 2011-12-01
+
 # Compiled source #
 ###################
 *.com
@@ -6,6 +8,7 @@
 *.exe
 *.o
 *.so
+
 # Packages #
 ############
 # it's better to unpack these files and commit the raw source
@@ -24,8 +27,7 @@
 *.log
 ##
 ## stop ignoring .sql 2021-10-04
-##*.sql
-##
+#*.sql
 *.sqlite
 
 # OS generated files #
@@ -38,18 +40,19 @@
 ehthumbs.db
 Thumbs.db
 
-# backup files ans vi swap.
+# backup files ans vi swap #
+############################
 *~
 *.bak
 *.swp
 \#*
 
-#############
-# hkim added
-#############
+# hkim added #
+##############
 /.vagrant/
 /vendor/
 a.out
+*.dylib
 
 ## commmon-lisp
 *.fasl
@@ -59,22 +62,30 @@ a.out
 *.lx64fsl
 *.x86f
 
-##
-*.dylib
-
-## clojure
-/.m2/
-/.shadow-cljs/
-/node_modules/
-/target/
-.calva/
-.clj-kondo/
-.cpcache/
-.lsp/
+## luminus
+/target
+/lib
+/classes
+/checkouts
+pom.xml
+dev-config.edn
+test-config.edn
+*.jar
+*.class
+/.lein-*
+profiles.clj
+/.env
 .nrepl-port
-.prepl-port
-.rebel_readline_history
-.env
+/.clj-kondo/.cache/
+/.lsp/.cache/
+/.calva/output-window/
 
+/node_modules
+/log
+
+## addded by hkimura
+/.rebel_readline_history
+/.shadow-cljs
+/node_modules
 
 
