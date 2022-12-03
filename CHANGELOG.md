@@ -5,6 +5,9 @@
 * clojure/installer - 時代遅れになるインストーラを直置きするより、
   インストーラの見つかる URL を置く。
 
+## 1.4.* - 2022-12-03
+- git を XDG_CONFIG_HOME/git へ。
+
 ## 1.3.1 - 2022-10-01
 ### Added
 - brew/pandoc
