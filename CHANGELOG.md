@@ -7,6 +7,8 @@
 
 ## 1.4.* - 2022-12-03
 - git を XDG_CONFIG_HOME/git へ。
+- emacs は .cofig/emacs/ に動かすと cider がすんなり動かない。
+  戻す。
 
 ## 1.3.1 - 2022-10-01
 ### Added
