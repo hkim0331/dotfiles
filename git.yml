@@ -1,14 +1,19 @@
 ---
 - name: install git global init files
   hosts: all
+  gather_facts: yes
+
   tasks:
-    - name: copy gitconfig and gitignore_global
+    - name: debug ansible_env.XDG_CONFIG_HOME
+      debug:
+        var: ansible_env.XDG_CONFIG_HOME
+    - name: copy git and ignore into ${XDG_CONFIG_HOME}/git/
       copy:
-        src:  "{{item.src}}"
+        src:  "{{item.src }}"
         dest: "{{item.dest}}"
         mode: "0600"
         force: yes
       loop:
-        - {src: git/gitconfig, dest: ~/.gitconfig}
-        - {src: git/gitignore_global, dest: ~/.gitignore_global}
+        - {src: git/config, dest: "{{ansible_env.XDG_CONFIG_HOME}}/git/"}
+        - {src: git/ignore, dest: "{{ansible_env.XDG_CONFIG_HOME}}/git/"}
 ...
