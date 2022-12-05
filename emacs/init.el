@@ -27,7 +27,6 @@
 (straight-use-package 'use-package)
 (setq straight-use-package-by-default t)
 
-;; 2021-02-19, moved from above of custom-set-variables
 (use-package init-loader)
 (init-loader-load "~/.emacs.d/inits/")
 

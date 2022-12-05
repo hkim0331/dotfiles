@@ -9,11 +9,11 @@
         var: ansible_env.XDG_CONFIG_HOME
     - name: copy git and ignore into ${XDG_CONFIG_HOME}/git/
       copy:
-        src:  "{{item.src }}"
-        dest: "{{item.dest}}"
+        src:  "{{item.src}}"
+        dest: "{{ansible_env.XDG_CONFIG_HOME}}/git/"
         mode: "0600"
         force: yes
       loop:
-        - {src: git/config, dest: "{{ansible_env.XDG_CONFIG_HOME}}/git/"}
-        - {src: git/ignore, dest: "{{ansible_env.XDG_CONFIG_HOME}}/git/"}
+        - {src: git/config}
+        - {src: git/ignore}
 ...

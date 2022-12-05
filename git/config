@@ -6,7 +6,7 @@
 [github]
   user = hkim0331
 [core]
-  excludesfile = ~/.config/git/.gitignore_global
+  excludesfile = ~/.config/git/ignore
   editor = vi
   # for windows only, not for macos nor linux
   # autocrlf = true

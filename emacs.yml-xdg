@@ -1,0 +1,24 @@
+---
+- name: setup ~/.emacs.d
+  hosts: all
+  gather_facts: yes
+  tasks:
+    - name: copy emacs/early-init.el into ~/.config/emacs/
+      copy:
+        src: emacs/early-init.el
+        dest: "{{ansible_env.XDG_CONFIG_HOME}}/emacs/"
+    - name: copy emacs/init.el into ~/.config/emacs/
+      copy:
+        src: emacs/init.el
+        dest: "{{ansible_env.XDG_CONFIG_HOME}}/emacs/"
+    - name: sync emacs/inits/ into ~/.config/emacs/inits/
+      synchronize:
+        src: emacs/inits/
+        dest: "{{ansible_env.XDG_CONFIG_HOME}}/emacs/inits/"
+        delete: yes
+    - name: sync emacs/inits-disabled/ into ~/.config/emacs/inits-disabled/
+      synchronize:
+        src: emacs/inits-disabled/
+        dest: "{{ansible_env.XDG_CONFIG_HOME}}/emacs/inits-disabled/"
+        delete: yes
+...
