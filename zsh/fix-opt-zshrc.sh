@@ -1,8 +1,10 @@
 #!/bin/bash
 #
-# Using bash explicitly.
+# Intel mac must do this to enable zsh-git-prompt.
+#
 # In macos, /bin/sh is not a symlink to /bin/bash.
 # /bin/sh errors in bellow script.
+# So, use /bin/bash explicitly.
 
 RC="${HOMEBREW_PREFIX}/opt/zsh-git-prompt/zshrc.sh"
 

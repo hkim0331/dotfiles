@@ -17,6 +17,6 @@
     - name: prepare zshenv by yourself
       debug:
         msg: "Prepare zshenv by yourself.
-              Github claims when finding a definition of GITHUB_API_TOKEN."
+              Github claims when finding GITHUB_API_TOKEN defined."
 ...
 
