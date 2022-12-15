@@ -23,4 +23,15 @@
         src: clojure/cljstyle
         dest: ~/.cljstyle
         force: yes
+    - name: copy clojure/tools/* to ~/.config/clojure/tools/
+      copy:
+        src: "{{item.src}}"
+        dest: ~/.config/clojure/tools/
+        mode: "0700"
+        force: no
+      loop:
+        - {src: clojure/tools/antq.edn}
+        - {src: clojure/tools/clj-new.edn}
+        - {src: clojure/tools/new.edn}
+        - {src: clojure/tools/tools.edn}
 ...
