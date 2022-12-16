@@ -7,7 +7,7 @@
 ## tools
 
 ### update
-    clj -Ttools install-latest
+    % clj -Ttools install-latest
 
 ### antq
 
