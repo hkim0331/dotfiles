@@ -1,14 +1,18 @@
 # CHANGELOG
 
 ## Unreleased
-* 複数の yml を一気に実行する。Makefile ではない。
-* clojure/installer - 時代遅れになるインストーラを直置きするより、
+- 複数の yml を一気に実行する。Makefile ではない。
+- clojure/installer - 時代遅れになるインストーラを直置きするより、
   インストーラの見つかる URL を置く。
+- emacs は .cofig/emacs/ に動かすと cider がすんなり動かない。
+
+
+## 1.4.0 - 2022-12-26
+### Added
+- clojure/versions
 
 ## 1.4.* - 2022-12-03
-- git を XDG_CONFIG_HOME/git へ。
-- emacs は .cofig/emacs/ に動かすと cider がすんなり動かない。
-  戻す。
+- git を `XDG_CONFIG_HOME/git` へ。
 
 ## 1.3.1 - 2022-10-01
 ### Added

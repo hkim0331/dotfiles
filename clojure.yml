@@ -3,8 +3,9 @@
 # org.slf4j/slf4j-nop {:mvn/version "RELEASE"}
 # を追加。
 #
+# * 2022-12-27: added versions
 # * 2022-12-09: deps.edn to ~/.config/clojure/
-#   antq がアップデートなって、org.slf4j/sl4j-nop の記述が不要になった？
+#   antq がアップデートなって、org.slf4j/sl4j-nop の記述が不要になったか？
 - name: clojure, leiningen, cljstyle
   hosts: all
   tasks:
@@ -34,4 +35,8 @@
         - {src: clojure/tools/clj-new.edn}
         - {src: clojure/tools/new.edn}
         - {src: clojure/tools/tools.edn}
+    - name: copy clojure/versions/deps.edn to ~/clojure/versions/deps.edn
+      copy:
+        src: clojure/versions/deps.edn
+        dest: ~/clojure/versions/deps.edn
 ...
