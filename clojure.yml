@@ -35,6 +35,11 @@
         - {src: clojure/tools/clj-new.edn}
         - {src: clojure/tools/new.edn}
         - {src: clojure/tools/tools.edn}
+    - name: create ~/clojure/versions dir
+      file:
+        path: ~/clojure/versions
+        state: directory
+        mode: "0755"
     - name: copy clojure/versions/deps.edn to ~/clojure/versions/deps.edn
       copy:
         src: clojure/versions/deps.edn

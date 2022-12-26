@@ -11,7 +11,10 @@
 ### Added
 - clojure/versions
 
-## 1.4.* - 2022-12-03
+### Changed
+- emacs.yml: check existence of .emacs.d, .emacs.d/inits and .emacs.d.inits-disabled
+
+## 1.4.0-SNAPSHOT
 - git を `XDG_CONFIG_HOME/git` へ。
 
 ## 1.3.1 - 2022-10-01
