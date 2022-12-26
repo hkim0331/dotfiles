@@ -26,7 +26,7 @@
            ;; Run an interactive Clojure REPL with nREPL connection and CIDER libraries
            ;; clj -M:cider
            :cider {:extra-deps {nrepl/nrepl       {:mvn/version "1.0.0"}
-                                cider/cider-nrepl {:mvn/version "0.28.5"}}
+                                cider/cider-nrepl {:mvn/version "0.29.0"}}
                    :main-opts  ["-m" "nrepl.cmdline"
                                 "--middleware" "[cider.nrepl/cider-middleware]"
                                 "--interactive"]}
