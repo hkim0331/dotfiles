@@ -2,13 +2,17 @@
 # deps.edn は Homebrew のコピーに
 # org.slf4j/slf4j-nop {:mvn/version "RELEASE"}
 # を追加。
+#
+# * 2022-12-27: added versions
+# * 2022-12-09: deps.edn to ~/.config/clojure/
+#   antq がアップデートなって、org.slf4j/sl4j-nop の記述が不要になったか？
 - name: clojure, leiningen, cljstyle
   hosts: all
   tasks:
-    - name: copy clojure/deps.edn into ~/.clojure
+    - name: copy clojure/deps.edn into ~/.config/clojure
       copy:
         src: clojure/deps.edn
-        dest: ~/.clojure/
+        dest: ~/.config/clojure/
         force: yes
     - name: copy clojure/profiles.clj into ~/.lein
       copy:
@@ -20,4 +24,24 @@
         src: clojure/cljstyle
         dest: ~/.cljstyle
         force: yes
+    - name: copy clojure/tools/* to ~/.config/clojure/tools/
+      copy:
+        src: "{{item.src}}"
+        dest: ~/.config/clojure/tools/
+        mode: "0700"
+        force: no
+      loop:
+        - {src: clojure/tools/antq.edn}
+        - {src: clojure/tools/clj-new.edn}
+        - {src: clojure/tools/new.edn}
+        - {src: clojure/tools/tools.edn}
+    - name: create ~/clojure/versions dir
+      file:
+        path: ~/clojure/versions
+        state: directory
+        mode: "0755"
+    - name: copy clojure/versions/deps.edn to ~/clojure/versions/deps.edn
+      copy:
+        src: clojure/versions/deps.edn
+        dest: ~/clojure/versions/deps.edn
 ...

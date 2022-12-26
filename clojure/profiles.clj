@@ -8,4 +8,3 @@
   :plugins
   [[lein-localrepo "0.5.4"]]}}
 
-

@@ -1,13 +1,58 @@
 # CHANGELOG
 
 ## Unreleased
-* 複数の yml を一気に実行する。Makefile ではない。
-* 特定のホストでは実行しないエントリー e.g. m1 では basictex 不要
-  => 500MB くらいと割り切ってもよい。
-* opecv はコメントアウトしない。brew bundle cleanup で消えてしまう。
-  clojure からの呼び出しのために、reinstall --build-from-source が必要になる。
-* clojure/installer - 時代遅れになるインストーラを直置きするより、
+- 複数の yml を一気に実行する。Makefile ではない。
+- clojure/installer - 時代遅れになるインストーラを直置きするより、
   インストーラの見つかる URL を置く。
+- emacs は .cofig/emacs/ に動かすと cider がすんなり動かない。
+
+
+## 1.4.0 - 2022-12-26
+### Added
+- clojure/versions
+
+### Changed
+- emacs.yml: check existence of .emacs.d, .emacs.d/inits and .emacs.d.inits-disabled
+
+## 1.4.0-SNAPSHOT
+- git を `XDG_CONFIG_HOME/git` へ。
+
+## 1.3.1 - 2022-10-01
+### Added
+- brew/pandoc
+  pandoc は前から使っていたが？
+
+### removed
+- brew/jupyterlab
+
+## 1.3.0 - 2022-09-18
+### Added
+- bash-git-prompt
+- zsh/fix-opt-zshrc.sh
+  brew の zsh-git-prompt はいまだに python をポイントしている。
+  python3 にスクリプトを書き換えないとプロンプトがリポジトリの状態を
+  反映しない。
+
+
+## 1.2.13.1 - 2022-09-15
+- Your GitHub access token has been found in hkim0331/dotfiles and revoked
+  zshenv をgit 下で管理するのをやめる。zshenv_local 作戦もやめ。
+
+## 1.2.13 - 2022-09-14
+- zsh.yml overwrite existing ~/.zshenv.
+  instead, read ~/.zshenv_local if exists
+
+## 1.2.12 - 2022-09-09
+- some nrepl aliases from practicalli
+
+## 1.2.11 - 2022-09-08
+- opecv はコメントアウトしない。brew bundle cleanup で消えてしまう。
+  clojure からの呼び出しのために、reinstall --build-from-source が必要になる。
+- git/autocrlf=true は Windows オンリー。マックでそれやるとおかしなことになる。
+- common-lisp/roswell
+  いったん、brew uninstall roswell してから brew install roswell し直し。
+  これで imac3 の common-lisp は復活した。
+- alias ec for emacsclient
 
 ## 1.2.10 - 2022-09-05
 ### hotfix

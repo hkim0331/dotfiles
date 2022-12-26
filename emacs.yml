@@ -2,6 +2,18 @@
 - name: setup ~/.emacs.d
   hosts: all
   tasks:
+    - name: exists ~/.emacs.d
+      file:
+        path: ~/.emacs.d
+        state: directory
+    - name: exists ~/.emacs.d/inits
+      file:
+        path: ~/.emacs.d/inits
+        state: directory
+    - name: exists ~/.emacs.d/inits-disabled
+      file:
+        path: ~/.emacs.d/inits-disabled
+        state: directory
     - name: copy emacs/early-init.el into ~/.emacs.d/
       copy:
         src: emacs/early-init.el

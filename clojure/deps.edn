@@ -2,18 +2,37 @@
  :paths ["src"]
 
  :deps {
-        org.clojure/clojure {:mvn/version "1.11.1"}
-        ;; stop antq warning messages
-        org.slf4j/slf4j-nop {:mvn/version "RELEASE"}}
+        org.clojure/clojure {:mvn/version "1.11.1"}}
 
  :aliases {
            :deps {:replace-paths []
-                  :replace-deps {org.clojure/tools.deps.alpha {:mvn/version "0.14.1222"}
-                                 org.slf4j/slf4j-nop {:mvn/version "1.7.25"}}
-                  :ns-default clojure.tools.cli.api
-                  :ns-aliases {help clojure.tools.cli.help}}
-           :test {:extra-paths ["test"]}}
+                  :replace-deps {org.clojure/tools.deps.cli {:mvn/version "0.9.10"}}
+                  :ns-default clojure.tools.deps.cli.api
+                  :ns-aliases {help clojure.tools.deps.cli.help}}
+
+           :test {:extra-paths ["test"]
+                  :extra-deps {io.github.cognitect-labs/test-runner
+                               {:git/tag "v0.5.1", :git/sha "dfb30dd"}}
+                  :exec-fn cognitect.test-runner.api/test}
+
+           ;; Simple nREPL server REPL, headless
+           ;; call with -i flag to start interactive client
+           ;; clj -M:nrepl
+           ;; or
+           ;; clj -M:nrepl -i
+           :nrepl {:extra-deps {nrepl/nrepl {:mvn/version "1.0.0"}}
+                   :main-opts  ["-m" "nrepl.cmdline"]}
+
+           ;; Run an interactive Clojure REPL with nREPL connection and CIDER libraries
+           ;; clj -M:cider
+           :cider {:extra-deps {nrepl/nrepl       {:mvn/version "1.0.0"}
+                                cider/cider-nrepl {:mvn/version "0.28.5"}}
+                   :main-opts  ["-m" "nrepl.cmdline"
+                                "--middleware" "[cider.nrepl/cider-middleware]"
+                                "--interactive"]}
+           }
 
  :mvn/repos {
              "central" {:url "https://repo1.maven.org/maven2/"}
-             "clojars" {:url "https://repo.clojars.org/"}}}
+             "clojars" {:url "https://repo.clojars.org/"}}
+ }

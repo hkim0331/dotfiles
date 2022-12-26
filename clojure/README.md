@@ -1,6 +1,15 @@
 # clojure
 
-## antq
+## deps.edn
+
+[practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn)
+
+## tools
+
+### update
+    % clj -Ttools install-latest
+
+### antq
 
 ```
 # Install tool

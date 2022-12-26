@@ -2,7 +2,13 @@
 #
 # origin: ${dotfiles}/zsh/zprofile
 #
-# * set app specific paths, etc.
+# order:
+#   .zshenv
+# > .zprofile
+#   .zshrc
+#   .zsh_aliase
+#
+# * setup app specific env vars.
 # * setup PATH.
 # * read ~/.zsh_aliases.
 
