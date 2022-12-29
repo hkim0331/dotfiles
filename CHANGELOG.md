@@ -7,6 +7,10 @@
 - emacs は .cofig/emacs/ に動かすと cider がすんなり動かない。
 
 
+## 1.4.2 - 2022-12-29
+### Added
+- dev.weavejester/medley to clojure/versions/deps.edn
+
 ## 1.4.1 - 2022-12-26
 ### Added
 - empty emacs.d/inits-diabled/.placeholder for git.
